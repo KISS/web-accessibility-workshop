@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codeland Web Accessibility Demo</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/assets/9e0c7a90-ed22-465f-a689-be8dbe4e09d9_200x200.png"/>
+    <!-- https://github.com/necolas/normalize.css/ -->
+    <link href="styles/normalize-8.0.1.css" rel="stylesheet">
+    <link href="/styles/main.css" rel="stylesheet">
+    <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="site-header">
+      <div class="logo-container">
+        <img class="site-logo" src="/assets/9e0c7a90-ed22-465f-a689-be8dbe4e09d9_200x200.png"/>
+      </div>
+      <div class="site-nav">
+        <a href="/">Home</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+
+    <h1 class="page-title">Contact Form</h1>
+
+    <!-- main content -->
+    <div class="content-wrapper">
+      <form class="form-contact">
+        <div class="label required">Name</div>
+        <input type="text" required/>
+
+        <div class="label required">Email</div>
+        <input type="email" required/>
+
+        <div class="label">Message</div>
+        <textarea required></textarea>
+
+        <input type="submit" value="Send" class="button"/>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <div class="site-footer">
+      <p><a href="https://github.com/KISS/web-accessibility-workshop/">Check out project code here</a></p>
+      <p class="copyright">&copy; 2019 Luisa M. Morales</p>
+   </div>
+  </body>
+</html>

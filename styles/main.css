@@ -1,0 +1,318 @@
+/* variables */
+/* $color-purple: #cc4397;
+$color-purple-dark: #4f4fff;
+$color-blue: #497aff;
+$color-orange: #ffa513;
+$color-orange-bright: #ff8c5b;
+$color-black: #000000;
+$color-white: #ffffff; */
+
+/* common */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 1260px;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6,
+.heading {
+  font-family: "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 20px;
+  letter-spacing: -0.03em;
+  color: #000;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  color: green;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+input {
+  display: block;
+  font-family: "Helvetica", sans-serif;
+  /* font-size: 16px; */
+  width: 100%;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.label.required::after {
+  content: " *";
+}
+
+textarea {
+  font-family: "Helvetica", sans-serif;
+  width: 100%;
+  resize: vertical;
+}
+
+input,
+textarea {
+  border-radius: 2px;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.label:hover,
+input:hover,
+textarea:hover {
+  border-color: cadetblue;
+}
+
+.label:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 20px;
+}
+
+.button {
+  background-color: cadetblue;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+
+.form-contact {
+  width: 40%;
+  margin: 60px auto;
+}
+
+.form-contact .label {
+  font-style: italic;
+  color: #4d4d4d;
+  font-size: 16px;
+  margin: 0 0 7px 0;
+}
+
+.site-header,
+.content-wrapper,
+.site-footer {
+  box-sizing: inherit;
+}
+
+.link {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* header */
+.site-header {
+  height: 200px;
+  padding: 20px 0;
+}
+
+.logo-container {
+  display: inline-block;
+  width: 48%;
+}
+
+.site-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.site-nav {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+
+.site-nav a {
+  margin: 15px;
+}
+
+/* content */
+.page-title {
+  margin: 0px 20px 60px;
+  text-align: center;
+  text-decoration: underline;
+  color: cadetblue;
+  font-size: 24px;
+}
+
+.content-wrapper {
+  overflow: hidden;
+  padding-bottom: 80px;
+  min-height: 100%;
+}
+
+.content-wrapper h1,
+.content-wrapper .heading {
+  font-size: 20px;
+}
+
+.section-blog {
+  width: 60%;
+  display: inline-block;
+  margin-right: 120px;
+}
+
+.section-blog img {
+  width: 40%;
+}
+
+.section-blog .summary {
+  display: inline-block;
+  width: 50%;
+  margin-left: 30px;
+  vertical-align: top;
+}
+
+.section-blog .summary a {
+  text-decoration: underline;
+}
+
+.section-aside {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.section-aside .content-wrapper {
+  width: 85%;
+  margin: 0 0 0 auto;
+}
+
+.section-aside .list {
+  margin-top: 40px;
+}
+
+.section-aside .list h1 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.section-aside .list p {
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+/* hero image */
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background-color: gray;
+}
+
+.hero-image img {
+  position: absolute;
+  top: -184px;
+}
+
+.hero-image .page-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+.blog .content {
+  margin: 60px;
+}
+
+/* banner */
+.banner {
+  position: fixed;
+  height: 65px;
+  bottom: 0;
+  background: gray;
+  color: yellow;
+  width: 100%;
+  max-width: 1260px;
+  text-align: center;
+  z-index: 1;
+}
+
+.banner .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.banner p {
+  margin: 20px 0;
+}
+
+.banner.hide {
+  display: none;
+}
+
+/* footer */
+.site-footer {
+  height: 150px;
+  background: #081c2b;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.site-footer .copyright {
+  font-size: 13px;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.site-footer a:hover,
+.site-footer a:active {
+  color: gray;
+}
