@@ -196,10 +196,20 @@ input[type="radio"] {
   font-size: 20px;
 }
 
-.section-blog {
-  width: 60%;
+.content-left,
+.content-right {
   display: inline-block;
-  margin-right: 120px;
+  width: 50%;
+}
+
+.content-left {
+  width: 60%;
+}
+
+.content-right {
+  width: 35%;
+  vertical-align: top;
+  margin-left: 0 0 0 auto;
 }
 
 .section-blog img {
@@ -217,14 +227,8 @@ input[type="radio"] {
   text-decoration: underline;
 }
 
-.section-aside {
-  width: 30%;
-  display: inline-block;
-  vertical-align: top;
-}
-
 .section-aside .content-wrapper {
-  width: 85%;
+  width: 70%;
   margin: 0 0 0 auto;
 }
 
