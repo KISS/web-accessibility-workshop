@@ -5,6 +5,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/assets/9e0c7a90-ed22-465f-a689-be8dbe4e09d9_200x200.png"/>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fascinate|Righteous|Sanchez&display=swap" rel="stylesheet">
     <!-- https://github.com/necolas/normalize.css/ -->
     <link href="styles/normalize-8.0.1.css" rel="stylesheet">
     <link href="/styles/main.css" rel="stylesheet">
@@ -55,7 +57,7 @@
           <div class="content-wrapper">
             <h1>About The Workshop</h1>
             <p>Gummies bear claw cotton candy. Toffee marshmallow soufflé. Lollipop tootsie roll jelly beans jujubes pudding.</p>
-            <p>Checkout out the project on Github <span class="link js-link">HERE</span></p>
+            <p>Checkout out the project on Github <span class="link js-link" tabindex="0">HERE</span></p>
             <div class="list">
               <h1>Things You'll Learn:</h1>
               <p>- Dessert oat cake gingerbread</p>
@@ -75,8 +77,36 @@
 
     <!-- footer -->
     <div class="site-footer">
-      <p><a href="https://github.com/KISS/web-accessibility-workshop/">Check out project code here</a></p>
-      <p class="copyright">&copy; 2019 Luisa M. Morales</p>
-   </div>
+      <div class="site-footer-container">
+        <div class="form-subscribe-wrapper">
+          <h1>Subscribe to our Newsletter</h1>
+
+          <form class="form-subscribe" name="subscribeDigest">
+            <div class="input-wrapper">
+              <input type="text" required/>
+              <div class="label">Name</div>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="email" required/>
+              <div class="label required">Email</div>
+            </div>
+
+            <div class="input-wrapper">
+              <label class="label label-checkbox">Subscribe to digest newsletter</label>
+              <input type="checkbox" required>
+            </div>
+
+            <span class="button" tabindex="0">Subscribe</span>
+            <span class="success">Thanks for subscribing!</span>
+            <span class="error">Something went wrong, please resubmit.</span>
+          </form>
+        </div>
+
+        <p class="cta"><a href="https://github.com/KISS/web-accessibility-workshop/">Check out project code here</a></p>
+
+        <p class="copyright">&copy; 2019 Luisa M. Morales</p>
+      </div>
+    </div>
   </body>
 </html>

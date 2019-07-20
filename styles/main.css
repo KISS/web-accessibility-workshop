@@ -19,8 +19,6 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 16px;
   line-height: 1.55;
-  margin: 0 auto;
-  max-width: 1260px;
   min-height: 100%;
 }
 
@@ -53,7 +51,8 @@ a {
 }
 
 a:hover,
-a:active {
+a:active,
+a:focus {
   color: green;
 }
 
@@ -64,26 +63,12 @@ img {
   vertical-align: bottom;
 }
 
-input {
-  display: block;
-  font-family: "Helvetica", sans-serif;
-  /* font-size: 16px; */
-  width: 100%;
-}
+/*
+  FORMS
+*/
 
-.label {
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.label.required::after {
-  content: " *";
-}
-
-textarea {
-  font-family: "Helvetica", sans-serif;
-  width: 100%;
-  resize: vertical;
+form {
+  font-family: 'Sanchez', serif;
 }
 
 input,
@@ -98,33 +83,71 @@ textarea {
   width: 100%;
 }
 
-.label:hover,
 input:hover,
-textarea:hover {
+textarea:hover,
+.label:hover {
   border-color: cadetblue;
 }
 
-.label:focus,
 input:focus,
-textarea:focus {
+textarea:focus,
+.label:focus {
   outline: none;
+}
+
+input {
+  display: block;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  width: 100%;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: 20px;
+  margin: 10px;
 }
 
+textarea {
+  font-family: "Helvetica", sans-serif;
+  width: 100%;
+  resize: vertical;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.label.required::after {
+  content: "*";
+  margin-left: 5px;
+}
+
+/*
+  BUTTONS
+*/
+
+button,
 .button {
+  font-family: "Helvetica", sans-serif;
   background-color: cadetblue;
   color: #fff;
   font-size: 18px;
+  line-height: 1.2;
   font-weight: 600;
-  height: 50px;
-  line-height: 50px;
-  padding: 0;
+  padding: 8px 12px;
+  width: auto;
+  min-width: 120px;
+  cursor: default;
+  border: 1px solid cadetblue;
+  border-radius: 6px;
+  text-align: center;
 }
+
+/*
+  FORM - CONTACT
+*/
 
 .form-contact {
   width: 40%;
@@ -138,6 +161,75 @@ input[type="radio"] {
   margin: 0 0 7px 0;
 }
 
+.form-contact .input-wrapper input {
+  width: 70%;
+  display: inline-block;
+}
+
+.form-contact .input-wrapper .label {
+  float: left;
+  width: 30%;
+  display: inline-block;
+  font-size: 22px;
+  font-style: normal;
+}
+
+/*
+  FORM - SUBSCRIBE
+*/
+
+.form-subscribe-wrapper {
+  max-width: 600px;
+  text-align: left;
+  margin: 40px 0 60px;
+}
+
+.form-subscribe {
+  color: lightgray;
+}
+
+.form-subscribe .input-wrapper input {
+  width: 65%;
+  display: inline-block;
+}
+
+.form-subscribe .input-wrapper .label {
+  float: left;
+  width: 15%;
+}
+
+.form-subscribe .input-wrapper .label-checkbox {
+  width: auto;
+  float: none;
+}
+
+.form-subscribe .input-wrapper input[type="checkbox"] {
+  width: auto;
+}
+
+.form-subscribe .button {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.form-subscribe .success,
+.form-subscribe .error {
+  display: none;
+  margin-left: 10px;
+}
+
+.form-subscribe .error {
+  color: red;
+}
+
+.form-subscribe input.error {
+  box-shadow: 0 0 0 2px red;
+}
+
+/*
+  GENERAL
+*/
+
 .site-header,
 .content-wrapper,
 .site-footer {
@@ -150,10 +242,30 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-/* header */
+.page-title {
+  /* font-family: 'Fascinate', cursive; */
+  /* font-family: 'Righteous', cursive; */
+  /* letter-spacing: 1.2px; */
+  margin: 0px 20px 60px;
+  text-align: center;
+  text-decoration: underline;
+  color: cadetblue;
+  font-size: 24px;
+}
+
+.blog .content {
+  margin: 60px;
+}
+
+/*
+  HEADER
+*/
+
 .site-header {
   height: 200px;
   padding: 20px 0;
+  margin: 0 auto;
+  max-width: 1260px;
 }
 
 .logo-container {
@@ -176,19 +288,16 @@ input[type="radio"] {
   margin: 15px;
 }
 
-/* content */
-.page-title {
-  margin: 0px 20px 60px;
-  text-align: center;
-  text-decoration: underline;
-  color: cadetblue;
-  font-size: 24px;
-}
+/*
+  CONTENT
+*/
 
 .content-wrapper {
   overflow: hidden;
   padding-bottom: 80px;
-  min-height: 100%;
+  /* min-height: 100%; */
+  margin: 0 auto;
+  max-width: 1260px;
 }
 
 .content-wrapper h1,
@@ -212,6 +321,40 @@ input[type="radio"] {
   margin-left: 0 0 0 auto;
 }
 
+/*
+  SECTION - ASIDE
+*/
+
+.section-aside .content-wrapper {
+  width: 70%;
+  margin: 0 0 0 auto;
+}
+
+.section-aside h1 {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+.section-aside .list {
+  margin-top: 40px;
+}
+
+.section-aside .list h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.section-aside .list p {
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+/*
+  SECTION - BLOG PREVIEW
+*/
+
 .section-blog img {
   width: 40%;
 }
@@ -227,26 +370,10 @@ input[type="radio"] {
   text-decoration: underline;
 }
 
-.section-aside .content-wrapper {
-  width: 70%;
-  margin: 0 0 0 auto;
-}
+/*
+  HERO IMAGE
+*/
 
-.section-aside .list {
-  margin-top: 40px;
-}
-
-.section-aside .list h1 {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-.section-aside .list p {
-  margin-bottom: 10px;
-  margin-left: 8px;
-}
-
-/* hero image */
 .hero-image {
   position: relative;
   width: 100%;
@@ -267,27 +394,35 @@ input[type="radio"] {
   width: 100%;
 }
 
-.blog .content {
-  margin: 60px;
-}
+/*
+  BANNER
+*/
 
-/* banner */
 .banner {
+  font-family: 'Righteous', cursive;
   position: fixed;
-  height: 65px;
+  min-height: 65px;
   bottom: 0;
-  background: gray;
+  left: 0;
+  background: cadetblue;
   color: yellow;
   width: 100%;
-  max-width: 1260px;
   text-align: center;
   z-index: 1;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+.banner .banner-content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1260px;
 }
 
 .banner .close {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: -15px;
+  right: 0;
   cursor: pointer;
 }
 
@@ -299,17 +434,39 @@ input[type="radio"] {
   display: none;
 }
 
-/* footer */
+/*
+  FOOTER
+*/
+
 .site-footer {
-  height: 150px;
+  min-height: 150px;
   background: #081c2b;
   color: #fff;
-  padding: 40px 20px;
   text-align: center;
 }
 
+.site-footer-container {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1260px;
+  text-align: left;
+  position: relative;
+}
+
+.site-footer h1 {
+  text-align: left;
+  margin-bottom: 40px;
+  color: lightgray;
+  text-transform: uppercase;
+}
+
+.site-footer .cta {
+  position: absolute;
+}
+
 .site-footer .copyright {
-  font-size: 13px;
+  font-size: 11px;
+  text-align: right;
 }
 
 .site-footer a {
